@@ -1,0 +1,41 @@
+<h1>Quiz Forum</h1>
+<hr/>
+<!-- <div>
+    <input type="button" value="load quiz" (click)="loadQuiz()"/>
+    <form>
+        <tr>
+            <th>Question Number</th>
+            <th>Prompt</th>
+            <th>Option1</th>
+            <th>Option2</th>
+            <th>Option3</th>
+            <th>Option4</th>
+        </tr>
+        <tr *ngFor="let q of questionList">
+            <td>{{q.qid}}</td>
+            <td>{{q.prompt}}</td>
+            <td>{{q.option1}}</td>
+            <td>{{q.option2}}</td>
+            <td>{{q.option3}}</td>
+            <td>{{q.option4}}</td>
+        </tr>
+    </form>
+</div> -->
+<h6 align="center">{{numCorrect}}</h6><h6 align="center">/</h6><h6 align="center">{{numQuestions}}</h6>
+Question: {{questionList[currQuestion]?.qid}}<br><br>
+{{questionList[currQuestion]?.prompt}}
+<form [formGroup]="form">
+    <input type="radio" value=1 formControlName="givenAns">
+    <span>{{questionList[currQuestion]?.option1}}</span><br>
+    <input type="radio" value=2 formControlName="givenAns">
+    <span>{{questionList[currQuestion]?.option2}}</span><br>
+    <input type="radio" value=3 formControlName="givenAns">
+    <span>{{questionList[currQuestion]?.option3}}</span><br>
+    <input type="radio" value=4 formControlName="givenAns">
+    <span>{{questionList[currQuestion]?.option4}}</span><br>
+</form>
+<br>
+<button (click)="prevQuestion()" [disabled]="currQuestion<1">Prev</button>
+<button (click)="nextQuestion()" [disabled]="currQuestion>=questionList.length-1">Next</button>
+<br><br>
+<button (click)="submit()">Submit</button>

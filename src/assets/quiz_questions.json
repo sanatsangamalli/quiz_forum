@@ -1,0 +1,44 @@
+{
+    "question": [
+     
+        {
+            "qid":"1",
+            "prompt": "2+2?",
+            "option1": "1",
+            "option2": "2",
+            "option3": "3",
+            "option4": "4",
+            "solution": "4"
+        },
+        
+        {
+            "qid":"2",
+            "prompt": "why does java have a 2-step compilation?",
+            "option1": "it's out of data",
+            "option2": "platform independent",
+            "option3": "newer languages are more up to date",
+            "option4": "poor design flaw",
+            "solution": "platform independent"
+        },
+
+        {
+            "qid":"3",
+            "prompt": "what command does node use to avoid rerunning the JS file?",
+            "option1": "node",
+            "option2": "ng",
+            "option3": "nodemon",
+            "option4": "json-server",
+            "solution": "nodemon"
+        },
+
+        {
+            "qid":"4",
+            "prompt": "using angular, how can we display something in html only if a condition has been fulfilled?",
+            "option1": "ngFor",
+            "option2": "ngIf",
+            "option3": "ng new",
+            "option4": "json-server",
+            "solution": "ngIf"
+        }
+    ]
+ }
