@@ -36,16 +36,20 @@ export class QuizComponent implements OnInit {
     this.currQuestion--;
   }
 
+  // getChoice(): FormControl {
+  //   return this.form.get('givenAns');
+  // }
+
   submit() : void {
     var soln = this.questionList[this.currQuestion].solution;
     console.log(`soln is ${soln}`);
-    var choice = this.form.value.givenAns;
+    var c = this.questionList[this.currQuestion];
+    var choice = c["option" + (this.form.value.givenAns)];  //workaround to get option + # of json file using user input
     console.log(`choice is ${choice}`);
     if(choice == soln) {
       console.log("correct answer");
       this.numCorrect++;
     }
-    //this.nextQuestion();
   }
 
 }
